@@ -26,7 +26,7 @@ def git_pull(repo_dir):
         os.chdir(repo_dir)
         
         # Run git pull
-        result = subprocess.run(['git', 'pull'], capture_output=True, text=True)
+        result = subprocess.run(['git', 'pull', 'git@github.com-intellitest:navendranr/intellitest'], capture_output=True, text=True)
         
         if result.returncode == 0:
             logging.info(f"Successfully pulled latest changes in {repo_dir}")
